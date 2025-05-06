@@ -1,6 +1,9 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from "@angular/common";
+import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule, Location } from "@angular/common";
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+
+import { HeroService } from '../hero.service';
 
 import { Hero } from "../hero";
 
@@ -10,6 +13,28 @@ import { Hero } from "../hero";
   templateUrl: './hero-details.component.html',
   styleUrl: './hero-details.component.css'
 })
-export class HeroDetailsComponent {
+export class HeroDetailsComponent implements OnInit {
     @Input() hero?: Hero;
+
+    constructor(
+      private route: ActivatedRoute,
+      private heroService: HeroService,
+      private location: Location
+    ) {}
+
+    ngOnInit(){
+        this.fetchHero();
+    }
+
+    fetchHero(): void{
+        const id = Number(this.route.snapshot.paramMap.get('id'));
+        this.heroService.getHero(id)
+            .subscribe(hero => this.hero = hero);
+    }
+
+    goBack(): void {
+        console.log("kjdshfksj");
+        this.location.back();
+    }
+
 }
