@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from "@angular/router";
 import { NgFor } from "@angular/common";
 
 import { HeroService } from '../hero.service';
-import { RouterModule } from "@angular/router";
+import { HeroSearchComponent } from "../hero-search/hero-search.component";
 
 import { Hero } from '../hero';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [NgFor, RouterModule],
+  imports: [NgFor, RouterModule, HeroSearchComponent],
   templateUrl: './dashboard.component.html',
   styleUrls: [ './dashboard.component.css' ]
 })
