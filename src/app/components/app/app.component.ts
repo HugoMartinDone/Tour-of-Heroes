@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
 
-import { MessagesComponent} from "./messages/messages.component";
+import { MessagesComponent } from "../messages/messages.component";
 
 @Component({
   selector: 'app-root',

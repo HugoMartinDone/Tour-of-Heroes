@@ -3,9 +3,9 @@ import { CommonModule, Location } from "@angular/common";
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
-import { HeroService } from '../hero.service';
+import { HeroService } from '../../services/hero.service';
 
-import { Hero } from "../hero";
+import { Hero } from "../../models/hero.model";
 
 @Component({
   selector: 'app-hero-details',

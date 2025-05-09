@@ -5,7 +5,7 @@ import { Observable, of } from "rxjs";
 
 import { MessageService } from './message.service';
 
-import { Hero } from './hero';
+import { Hero } from '../models/hero.model';
 
 
 @Injectable({

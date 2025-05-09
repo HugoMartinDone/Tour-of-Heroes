@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { NgFor } from "@angular/common";
 
-import { HeroService } from '../hero.service';
 import { HeroSearchComponent } from "../hero-search/hero-search.component";
+import { HeroService } from '../../services/hero.service';
 
-import { Hero } from '../hero';
+import { Hero } from "../../models/hero.model";
 
 @Component({
   selector: 'app-dashboard',

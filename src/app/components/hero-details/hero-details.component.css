@@ -1,4 +1,4 @@
-/* HeroDetailComponent's private CSS styles */
+/* MOBILE */
 label {
   color: #435960;
   font-weight: bold;
@@ -23,3 +23,14 @@ button:disabled {
   color: #ccc;
   cursor: auto;
 }
+
+
+/* à partir de la largeur 600, appliquer ça : */
+/* example :
+@media (min-width: 600px) {
+    label {
+      color: #a00;
+      font-weight: unset;
+    }
+}
+*/
