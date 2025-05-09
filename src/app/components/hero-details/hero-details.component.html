@@ -1,11 +1,17 @@
 <div *ngIf="hero">
-  <h2>Détails de {{hero.name | uppercase}}</h2>
-  <div>id: {{hero.id}}</div>
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
-  </div>
-</div>
+    <h2>Détails de {{hero.name | uppercase}}</h2>
+    <div>id: {{hero.id}}</div>
 
-<button type="button" (click)="save()">Save</button>
-<button type="button" (click)="goBack()">Go back</button>
+    <form [formGroup]="form" (ngSubmit)="save()">
+        <label for="hero-name">Hero name: </label>
+        <input type="text" id="new-hero" [(ngModel)]="hero.name" formControlName="name"/>
+
+        <label for="hero-class">Class: </label>
+        <select id="hero-class" [(ngModel)]="hero.class" formControlName="class">
+            <option *ngFor='let class of classes' [value]="class.toUpperCase()">{{class}}</option>
+        </select>
+
+        <button type="submit" class="add-button" [disabled]="!form.valid">Save</button>
+        <button type="button" (click)="goBack()">Go back</button>
+    </form>
+</div>

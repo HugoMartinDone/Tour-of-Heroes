@@ -14,7 +14,6 @@
     <input type="text" id="new-hero" formControlName="name"/>
 
     <label for="hero-class">Class: </label>
-    <!-- <input type="text" id="hero-class" formControlName="class"> -->
     <select id="hero-class" formControlName="class">
         <option *ngFor='let class of classes' [value]="class.toUpperCase()">{{class}}</option>
     </select>
