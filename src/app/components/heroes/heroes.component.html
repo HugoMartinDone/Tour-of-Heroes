@@ -1,22 +1,26 @@
-<h2>Liste des héros</h2>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </a>
-    <button type="button" class="delete" title="delete hero"
-        (click)="delete(hero)">x</button>
-  </li>
-</ul>
+<div class="left">
+    <h2>Liste des héros</h2>
+    <ul class="heroes">
+      <li *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
+        <button type="button" class="delete" title="delete hero"
+            (click)="delete(hero)">x</button>
+      </li>
+    </ul>
+</div>
+<div class="right">
+    <h2>Ajouter un héros!</h2>
+    <form [formGroup]="form" (ngSubmit)="createHero()">
+        <label for="hero-name">Hero name: </label>
+        <input type="text" id="new-hero" formControlName="name"/>
 
-<form [formGroup]="form" (ngSubmit)="createHero()">
-    <label for="hero-name">Hero name: </label>
-    <input type="text" id="new-hero" formControlName="name"/>
-
-    <label for="hero-class">Class: </label>
-    <select id="hero-class" formControlName="class">
-        <option *ngFor='let class of classes' [value]="class.toUpperCase()">{{class}}</option>
-    </select>
-
-    <button type="submit" class="add-button" [disabled]="!form.valid">Add hero</button>
-</form>
+        <label for="hero-class">Class: </label>
+        <select id="hero-class" formControlName="class">
+            <option value="" disabled selected>Select your option</option>
+            <option *ngFor='let class of classes' [value]="class.toUpperCase()">{{class}}</option>
+        </select>
+        <button type="submit" class="add-button" [disabled]="!form.valid">Add hero</button>
+    </form>
+</div>

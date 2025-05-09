@@ -1,65 +1,78 @@
 /* HeroesComponent's private CSS styles */
 .heroes {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 15em;
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+    width: 100%
 }
 
 input {
-  display: block;
-  width: 100%;
-  padding: .5rem;
-  margin: 1rem 0;
-  box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+select {
+    display: block;
+    min-width: 100%;
+    padding: .5rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    border-radius: 2px;
+    height: 40px;
+    border: 1px solid #999;
+    background-color: transparent;
 }
 
 .heroes li {
-  position: relative;
-  cursor: pointer;
+    position: relative;
+    cursor: pointer;
 }
 
 .heroes li:hover {
-  left: .1em;
+    left: .1em;
 }
 
 .heroes a {
-  color: #333;
-  text-decoration: none;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
-  display: block;
-  width: 100%;
+    color: #333;
+    text-decoration: none;
+    background-color: #EEE;
+    box-sizing: border-box;
+    margin: .4em 0;
+    height: 2em;
+    border-radius: 4px;
+    display: inline-block;
+    width: 90%;
 }
 
 .heroes a:hover {
-  color: #2c3a41;
-  background-color: #e6e6e6;
+    color: #2c3a41;
+    background-color: #e6e6e6;
 }
 
 .heroes a:active {
-  background-color: #525252;
-  color: #fafafa;
+    background-color: #525252;
+    color: #fafafa;
 }
 
 .heroes .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #405061;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  min-width: 16px;
-  text-align: right;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
+    display: inline-block;
+    font-size: small;
+    color: white;
+    box-sizing: border-box;
+    padding: 0.7em 0.7em 1.8em 0.7em;
+    background-color: #405061;
+    line-height: 1em;
+    position: relative;
+    height: 2em;
+    min-width: 16px;
+    text-align: right;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
 }
 
 .add-button {
@@ -69,22 +82,37 @@ input {
 }
 
 .add-button:hover {
-  color: white;
-  background-color: #42545C;
+    color: white;
+    background-color: #42545C;
 }
 
 button.delete {
-  position: absolute;
-  left: 210px;
-  top: 5px;
-  background-color: white;
-  color:  #525252;
-  font-size: 1.1rem;
-  margin: 0;
-  padding: 1px 10px 3px 10px;
+    position: relative;
+    background-color: white;
+    color:    #525252;
+    font-size: 1.1rem;
+    margin: 0;
+    top:2px;
+    padding: 1px 10px 3px 10px;
+    right: 1.9em;
 }
 
 button.delete:hover {
-  background-color: #525252;
-  color: white;
+    background-color: #525252;
+    color: white;
+}
+
+
+@media (min-width: 600px) {
+
+        .right {
+                float:right;
+                width: 50%;
+        }
+        .left {
+                float:left;
+                width: 50%;
+        }
+
+
 }
