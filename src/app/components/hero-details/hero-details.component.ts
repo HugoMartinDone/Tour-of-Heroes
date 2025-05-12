@@ -21,7 +21,7 @@ export class HeroDetailsComponent implements OnInit {
         name: new FormControl("", Validators.required),
         class: new FormControl("", Validators.required)
     });
-    classes = Object.values(HeroClass).filter(x => typeof x !== "number");
+    classes = HeroClass;
 
     constructor(
       private route: ActivatedRoute,

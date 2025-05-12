@@ -20,7 +20,7 @@
             <label for="hero-class">Class: </label>
             <select id="hero-class" formControlName="class">
                 <option value="" disabled selected>Select your option</option>
-                <option *ngFor='let class of classes' [value]="class.toUpperCase()">{{class}}</option>
+                <option *ngFor='let class of classes | keyvalue' [value]="class.key">{{ class.value }}</option>
             </select>
             <button type="submit" class="add-button" [disabled]="!form.valid">Add hero</button>
         </form>

@@ -2,12 +2,13 @@
     <h2>Détails de N°{{ hero.id }} {{hero.name | uppercase}}</h2>
 
     <form [formGroup]="form" (ngSubmit)="save()">
+
         <label for="hero-name">Hero name: </label>
         <input type="text" id="new-hero" [(ngModel)]="hero.name" formControlName="name"/>
 
         <label for="hero-class">Class: </label>
         <select id="hero-class" [(ngModel)]="hero.class" formControlName="class">
-            <option *ngFor='let class of classes' [value]="class.toUpperCase()">{{class}}</option>
+            <option *ngFor='let class of classes | keyvalue' [value]="class.key">{{ class.value }}</option>
         </select>
 
         <div class="buttons-cluster">
