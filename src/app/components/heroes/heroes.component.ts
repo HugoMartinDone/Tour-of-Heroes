@@ -33,12 +33,8 @@ export class HeroesComponent implements OnInit {
             .subscribe(heroes => this.heroes = heroes);
     }
 
-    isFormValid(): boolean{
-        return this.form.value.name && this.form.value.class;
-    }
-
     createHero(){
-        if(!this.isFormValid()){
+        if(!this.form.valid){
             return;
         }
         let hero: Hero = this.form.value;
@@ -47,21 +43,13 @@ export class HeroesComponent implements OnInit {
             this.heroes.push(hero);
             this.resetForm();
         });
-        console.log(hero);
     }
 
     resetForm(){
-        this.form.setValue({
+        this.form.reset({
             name:"",
             class:""
         });
-    }
-
-    add(name:string){
-        name = name.trim()
-        if(!name){ return };
-        this.heroService.addHero( { name } as Hero)
-            .subscribe(hero => this.heroes.push(hero));
     }
 
     delete(hero: Hero): void {

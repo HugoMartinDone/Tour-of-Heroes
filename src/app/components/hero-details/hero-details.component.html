@@ -1,6 +1,5 @@
 <div *ngIf="hero">
-    <h2>Détails de {{hero.name | uppercase}}</h2>
-    <div>id: {{hero.id}}</div>
+    <h2>Détails de N°{{ hero.id }} {{hero.name | uppercase}}</h2>
 
     <form [formGroup]="form" (ngSubmit)="save()">
         <label for="hero-name">Hero name: </label>
@@ -11,7 +10,9 @@
             <option *ngFor='let class of classes' [value]="class.toUpperCase()">{{class}}</option>
         </select>
 
-        <button type="submit" class="add-button" [disabled]="!form.valid">Save</button>
-        <button type="button" (click)="goBack()">Go back</button>
+        <div class="buttons-cluster">
+            <button type="submit" class="add-button" [disabled]="!form.valid">Save</button>
+            <button type="button" (click)="goBack()">Go back</button>
+        </div>
     </form>
 </div>
