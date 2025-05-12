@@ -1,108 +1,103 @@
-
 .heroes {
-    list-style-type: none;
-    padding: 0;
-    width: 100%
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
 }
 
 label {
-    color: #435960;
-    font-weight: bold;
+  color: #435960;
+  font-weight: bold;
 }
 
 input {
-    display: block;
-    width:100%;
-    margin-bottom: 15px;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 select {
-    display: block;
-    width:100%;
-    margin-bottom: 15px;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .heroes li {
-    position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
 }
 
 .heroes li:hover {
-    left: 5px;
+  left: 5px;
 }
 
 .heroes .list-item {
-    color: #333;
-    text-decoration: none;
-    background-color: #EEE;
-    box-sizing: border-box;
-    margin: 8px 0;
-    height: 30px;
-    border-radius: 4px;
-    display: flex;
-    align-items:center;
-    text-wrap:nowrap;
+  color: #333;
+  text-decoration: none;
+  background-color: #eee;
+  box-sizing: border-box;
+  margin: 8px 0;
+  height: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
 }
 
-.heroes .list-item .hero-name{
-    flex:1;
+.heroes .list-item .hero-name {
+  flex: 1;
 }
-
 
 .heroes .list-item:hover {
-    color: #2c3a41;
-    background-color: #e6e6e6;
+  color: #2c3a41;
+  background-color: #e6e6e6;
 }
 
 .heroes .list-item:active {
-    background-color: #525252;
-    color: #fafafa;
+  background-color: #525252;
+  color: #fafafa;
 }
 
 .heroes .badge {
-    box-sizing: border-box;
-    font-size: small;
-    background-color: #405061;
-    color: white;
-    border-radius: 4px 0 0 4px;
-    padding: 0 8px;
-    height: 30px;
-    line-height: 30px;
-    margin-right: 6px;
+  box-sizing: border-box;
+  font-size: small;
+  background-color: #405061;
+  color: white;
+  border-radius: 4px 0 0 4px;
+  padding: 0 8px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 6px;
 }
 
 button.delete {
-    background-color: white;
-    color:    #525252;
-    font-size: medium;
-    margin-right: 3px;
-    text-align:center;
-    padding: 0 7px 0 7px;
+  background-color: white;
+  color: #525252;
+  font-size: medium;
+  margin-right: 3px;
+  text-align: center;
+  padding: 0 7px 0 7px;
 }
 
 button.delete:hover {
-    background-color: #525252;
-    color: white;
+  background-color: #525252;
+  color: white;
 }
 
-.flexbox{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
+.flexbox {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.right, .left {
-    flex:1;
+.right,
+.left {
+  flex: 1;
 }
-
-
 
 @media (min-width: 600px) {
-
-    .flexbox{
-        flex-direction: row;
-    }
-
+  .flexbox {
+    flex-direction: row;
+  }
 }

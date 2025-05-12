@@ -1,26 +1,26 @@
 label {
-    color: #435960;
-    font-weight: bold;
+  color: #435960;
+  font-weight: bold;
 }
 
 input {
-    display: block;
-    width:100%;
-    margin-bottom: 15px;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 select {
-    display: block;
-    width:100%;
-    margin-bottom: 15px;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-.buttons-cluster{
-    display:flex;
-    flex-direction: row;
-    gap: 10px;
+.buttons-cluster {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 button {
-    flex:1;
+  flex: 1;
 }
